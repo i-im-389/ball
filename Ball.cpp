@@ -1,6 +1,7 @@
 #include "Ball.h"
 #include "Rand.h"
 #include "BallApp.h"
+#include "TextureManager.h"
 
 Ball::Ball()
 {
@@ -24,11 +25,10 @@ void Ball::init()
   theta = Rand::range(0, 360);
   vtheta = Rand::range(-360, 360);
 
-  image.loadFromFile("ball.png");
-  texture.loadFromImage(image);
+  texture = TextureManager::getInstance()->get("ball.png");
 
-  auto center = texture.getSize()/2u;
-  sprite.setTexture(texture, true);
+  auto center = texture->getSize()/2u;
+  sprite.setTexture(*texture, true);
   sprite.setOrigin(center.x, center.y);
 
   rap.reset();
