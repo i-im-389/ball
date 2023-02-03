@@ -16,8 +16,8 @@ protected:
 
   double life;
 
-  sf::Image image;
-  sf::Texture texture;
+  //sf::Image image;
+  sf::Texture* texture;
   sf::Sprite sprite;
 
  public:
