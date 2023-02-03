@@ -35,4 +35,5 @@ Timer.o: Timer.h
 Rand.o: Rand.h
 BallApp.o: BallApp.h Timer.h
 Ball.o: Ball.h Rand.h BallApp.h
+TextureManager.o:TextureManager.h
 
